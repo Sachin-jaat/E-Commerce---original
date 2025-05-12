@@ -1,0 +1,13 @@
+{% extends "app1/base.html" %} {% load static %} {% block content %}
+<h1>Your Wishlist</h1>
+
+{% for item in wishlist_items %}
+<div>
+  <h3>{{ item.product.name }}</h3>
+  <p>{{ item.product.description }}</p>
+  <p>${{ item.product.price }}</p>
+  <a href="{% url 'remove_from_wishlist' item.product.id %}">Remove</a>
+</div>
+{% empty %}
+<p>Your wishlist is empty.</p>
+{% endfor %} {% endblock content %}

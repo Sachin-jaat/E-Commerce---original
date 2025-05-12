@@ -1,0 +1,18 @@
+{% extends 'app1/base.html' %}
+{% block content %}
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: 100vh; text-align: center;">
+  <h2>My Profile</h2>
+  
+  <div class="profile">
+    {% if profile.profile_pic %}
+      <img src="{{ profile.profile_pic.url }}" alt="Profile Picture" style="height:100px; border-radius:50%; margin-bottom: 10px;">
+    {% else %}
+      <p>No profile picture.</p>
+    {% endif %}
+
+    <p><strong>Username:</strong> {{ request.user.username }}</p>
+    <p><strong>Email:</strong> {{ request.user.email }}</p>
+    <p><strong>Bio:</strong> {{ profile.bio }}</p>
+  </div>
+</div>
+{% endblock %}

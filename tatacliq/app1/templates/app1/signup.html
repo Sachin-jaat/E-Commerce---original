@@ -1,0 +1,60 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<div class="signup-container">
+    <h1>Sign Up for Free</h1>
+
+    <form id="signupForm" method="POST" action="{% url 'signup' %}" class="signup-form">
+        {% csrf_token %}
+
+        {% if form.non_field_errors %}
+            <div class="error">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+
+        <div class="form-group">
+            <label for="{{ form.username.id_for_label }}">Username</label>
+            {{ form.username }}
+            <div class="error-message">
+                {{ form.username.errors }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">Email</label>
+            {{ form.email }}
+            <div class="error-message">
+                {{ form.email.errors }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.role.id_for_label }}">Role</label>
+            {{ form.role }}
+            <div class="error-message">
+                {{ form.role.errors }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.password1.id_for_label }}">Password</label>
+            {{ form.password1 }}
+            <div class="error-message">
+                {{ form.password1.errors }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.password2.id_for_label }}">Confirm Password</label>
+            {{ form.password2 }}
+            <div class="error-message">
+                {{ form.password2.errors }}
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+</div>

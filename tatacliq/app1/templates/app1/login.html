@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-image">
+        <img src="{% static 'images/loginpagedis.jpg' %}" alt="Login Image">
+    </div>
+
+    <div class="login-form">
+        <h2>Login</h2>
+        <p class="subtitle">or <a href="{% url 'signup' %}">Create an account</a></p>
+
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            
+            {% if error %}
+                <div class="error-message">
+                    <p style="color: red;">{{ error }}</p>
+                </div>
+            {% endif %}
+
+            <div class="form-group">
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" name="username" placeholder="Enter your mobile/email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

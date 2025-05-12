@@ -1,0 +1,12 @@
+{% extends "app1/base.html" %}
+
+
+{% load static %}
+
+
+{% block content %}
+
+<h2>Welcome Admin {{ request.user.username }}</h2>
+<p>This is the admin dashboard.</p>
+
+{% endblock content %}

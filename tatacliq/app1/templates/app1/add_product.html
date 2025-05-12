@@ -1,0 +1,89 @@
+{% extends 'app1/base.html' %}
+
+{% block content %}
+  <h2>Add a New Product</h2>
+  
+  <form method="POST" enctype="multipart/form-data" class="product-form">
+    {% csrf_token %}
+
+    <label for="name">Product Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" rows="4" required></textarea>
+
+    <label for="price">Price</label>
+    <input type="number" id="price" name="price" step="0.01" required>
+
+    <label for="stock">Stock</label>
+    <input type="number" id="stock" name="stock" required>
+
+    <label for="category">Category</label>
+    <select id="category" name="category" required>
+      <option value="" disabled selected>Select Category</option>
+      {% for category in categories %}
+        <option value="{{ category.id }}">{{ category.name }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="image">Product Image</label>
+    <input type="file" id="image" name="image" accept="image/*" required>
+
+    <button type="submit" class="submit-btn">Add Product</button>
+  </form>
+{% endblock %}
+
+<!-- CSS for styling -->
+<style>
+  .product-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .product-form label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .product-form input,
+  .product-form textarea,
+  .product-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .product-form input[type="file"] {
+    padding: 3px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+</style>

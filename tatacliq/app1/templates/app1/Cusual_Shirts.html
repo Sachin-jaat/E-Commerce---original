@@ -1,0 +1,117 @@
+{% extends "app1/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="product-pages">
+    <!-- Page 1 -->
+    <div class="product-grid page" id="page1">
+      <div class="product-card">
+        <img src="{% static 'images/cshirt1.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt2.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt3.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt4.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt5.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt6.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt7.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt8.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt9.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt10.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt11.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt12.webp' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt13.webp' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt14.webp' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt15.webp' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt16.webp' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt17.webp' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt18.webp' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt19.webp' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt20.webp' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt21.webp' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt22.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt23.jpg' %}" alt="Hair Color">
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt24.jpg' %}" alt="Hair Color">
+      </div>
+      
+      <div class="product-card">
+        <img src="{% static 'images/cshirt25.jpg' %}" alt="Hair Color">
+      </div>
+      
+    </div>
+  
+    <!-- Page 2 -->
+    <div class="product-grid page" id="page2" style="display: none;">
+      
+      <div class="product-card">
+        <img src="{% static 'images/cshirt26.jpg' %}" alt="Product">
+       
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt27.jpg' %}" alt="Product">
+       
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt28.jpg' %}" alt="Product">
+       
+      </div>
+      <div class="product-card">
+        <img src="{% static 'images/cshirt29.jpg' %}" alt="Product">
+       
+      </div>
+  
+      <!-- Add more products as needed -->
+    </div>
+  </div>
+  
+  <!-- Pagination Buttons -->
+  <div class="pagination">
+    <button onclick="showPage(1)">1</button>
+    <button onclick="showPage(2)">2</button>
+</div>
+
+{% endblock content %}

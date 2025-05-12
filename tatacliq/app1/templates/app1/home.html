@@ -1,0 +1,411 @@
+{% extends "app1/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Myntra</title>
+
+
+<link rel="icon" href="{% static 'images/myntra.png' %}" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+ 
+    
+ 
+
+ {% block content %}
+ 
+     <!-- Slider -->
+     {% comment %} <div class="slider-wrapper">
+      <div class="slider-container">
+        <div class="slide active">
+          <img src="{% static 'images/img1.webp' %}" alt="Image 1">
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/img2.webp' %}" alt="Image 2">
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/img3.webp' %}" alt="Image 3">
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/img4.webp' %}" alt="Image 4">
+        </div>
+      </div>
+  
+     
+      <div class="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+      </div>
+    </div> {% endcomment %}
+    <div class="slider-wrapper">
+      <div class="slider-container">
+        <div class="slide active">
+          <a href="/products/"><img src="/static/images/img1.webp" alt="Image 1"></a>
+        </div>
+        <div class="slide">
+          <a href="/products/"><img src="/static/images/img2.webp" alt="Image 2"></a>
+        </div>
+        <div class="slide">
+          <a href="/products/"><img src="/static/images/img3.webp" alt="Image 3"></a>
+        </div>
+        <div class="slide">
+          <a href="/products/"><img src="/static/images/img4.webp" alt="Image 4"></a>
+        </div>
+      </div>
+    
+      <div class="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+      </div>
+    </div>
+    
+    <!--Slider ends here-->
+  
+    <!--RISING STAR-->
+  
+    <div class="star"><h1>RISING STAR</h1></div>
+  
+    <!-- RISING END Here-->
+  
+   <!--Slider Section Second-->
+     
+   <div class="slider-wrapper2">
+     <div class="slider-container2">
+       <div class="slide2 active2">
+         <img src="{% static 'images/a1.webp' %}" alt="Image 1">
+         <img src="{% static 'images/a2.webp' %}" alt="Image 2">
+         <img src="{% static 'images/a3.webp' %}" alt="Image 3">
+         <img src="{% static 'images/a4.webp' %}" alt="Image 4">
+         <img src="{% static 'images/a5.webp' %}" alt="Image 5">
+       </div>
+       <div class="slide2">
+         <img src="{% static 'images/b1.webp' %}" alt="Image 6">
+         <img src="{% static 'images/b2.webp' %}" alt="Image 7">
+         <img src="{% static 'images/b3.webp' %}" alt="Image 8">
+         <img src="{% static 'images/b4.webp' %}" alt="Image 9">
+         <img src="{% static 'images/b5.webp' %}" alt="Image 10">
+       </div>
+       <div class="slide2">
+         <img src="{% static 'images/c1.webp' %}" alt="Image 11">
+         <img src="{% static 'images/c2.webp' %}" alt="Image 12">
+         <img src="{% static 'images/c3.webp' %}" alt="Image 13">
+         <img src="{% static 'images/c4.webp' %}" alt="Image 14">
+         <img src="{% static 'images/c5.webp' %}" alt="Image 15">
+       </div>
+     </div>
+   
+     <div class="dots2">
+       <span class="dot2 active" data-index="0"></span>
+       <span class="dot2" data-index="1"></span>
+       <span class="dot2" data-index="2"></span>
+  
+     </div>
+   </div>
+   
+   <!--Slider 2 ends here-->
+   
+   <!--LUXE BAND-->
+  
+  <div class="luxe"><h1>LUXE GRAND REDUCTUION DEALS</h1></div>
+  
+  <!--Luxe Ends-->
+  
+   <!--Slider Section 3-->
+   <div class="slider-wrapper3">
+     <div class="slider-container3">
+       <div class="slide3 active3">
+         <img src="{% static 'images/la1.webp' %}" alt="Image 1">
+         <img src="{% static 'images/la2.webp' %}" alt="Image 2">
+         <img src="{% static 'images/la3.webp' %}" alt="Image 3">
+         <img src="{% static 'images/la4.webp' %}" alt="Image 4">
+         <img src="{% static 'images/la5.webp' %}" alt="Image 5">
+         <img src="{% static 'images/la6.jpeg' %}" alt="Image 6">
+       </div>
+       <div class="slide3">
+         <img src="{% static 'images/lb1.jpeg' %}" alt="Image 7">
+         <img src="{% static 'images/lb2.jpeg' %}" alt="Image 8">
+         <img src="{% static 'images/lb3.jpeg' %}" alt="Image 9">
+         <img src="{% static 'images/lb4.jpeg' %}" alt="Image 10">
+         <img src="{% static 'images/lb5.jpeg' %}" alt="Image 11">
+         <img src="{% static 'images/lb6.jpeg' %}" alt="Image 12">
+       </div>
+       <div class="slide3">
+         <img src="{% static 'images/lc1.webp' %}" alt="Image 13">
+         <img src="{% static 'images/lc2.webp' %}" alt="Image 14">
+         <img src="{% static 'images/lc3.webp' %}" alt="Image 15">
+         <img src="{% static 'images/lc4.webp' %}" alt="Image 16">
+         <img src="{% static 'images/lc5.webp' %}" alt="Image 17">
+         <img src="{% static 'images/lc6.webp' %}" alt="Image 18">
+       </div>
+     </div>
+   
+     <div class="dots3">
+       <span class="dot3 active" data-index="0"></span>
+       <span class="dot3" data-index="1"></span>
+       <span class="dot3" data-index="2"></span>
+     </div>
+   </div>
+   <!--Slider 3 ends-->
+    
+   <!--Medal  Bag-->
+  
+   <div class="medal"><h1>MEDAL WORTH BRANDS TO BAG</h1></div>
+    
+   <!--Medal Bag ends here-->
+  
+  
+   <!--Slider Four-->
+   <div class="slider-wrapper4">
+     <div class="slider-container4">
+       <div class="slide4 active4">
+         <img src="{% static 'images/ma1.webp' %}" alt="Image 1">
+         <img src="{% static 'images/ma2.webp' %}" alt="Image 2">
+         <img src="{% static 'images/ma3.webp' %}" alt="Image 3">
+         <img src="{% static 'images/ma4.webp' %}" alt="Image 4">
+         <img src="{% static 'images/ma5.webp' %}" alt="Image 5">
+         <img src="{% static 'images/ma6.webp' %}" alt="Image 6">
+       </div>
+       <div class="slide4">
+         <img src="{% static 'images/mb1.webp' %}" alt="Image 7">
+         <img src="{% static 'images/mb2.webp' %}" alt="Image 8">
+         <img src="{% static 'images/mb3.webp' %}" alt="Image 9">
+         <img src="{% static 'images/mb4.webp' %}" alt="Image 10">
+         <img src="{% static 'images/mb5.webp' %}" alt="Image 11">
+         <img src="{% static 'images/mb6.webp' %}" alt="Image 12">
+       </div>
+       <div class="slide4">
+         <img src="{% static 'images/mc1.webp' %}" alt="Image 13">
+         <img src="{% static 'images/mc2.webp' %}" alt="Image 14">
+         <img src="{% static 'images/mc3.webp' %}" alt="Image 15">
+         <img src="{% static 'images/mc4.webp' %}" alt="Image 16">
+         <img src="{% static 'images/mc5.webp' %}" alt="Image 17">
+         <img src="{% static 'images/mc6.webp' %}" alt="Image 18">
+       </div>
+       <div class="slide4">
+         <img src="{% static 'images/md1.webp' %}" alt="Image 19">
+         <img src="{% static 'images/md2.webp' %}" alt="Image 20">
+         <img src="{% static 'images/md3.webp' %}" alt="Image 21">
+         <img src="{% static 'images/md4.webp' %}" alt="Image 22">
+         <img src="{% static 'images/md5.webp' %}" alt="Image 23">
+         <img src="{% static 'images/md6.webp' %}" alt="Image 24">
+       </div>
+     </div>
+   
+     <div class="dots4">
+       <span class="dot4 active" data-index="0"></span>
+       <span class="dot4" data-index="1"></span>
+       <span class="dot4" data-index="2"></span>
+       <span class="dot4" data-index="3"></span>
+     </div>
+   </div>
+   <!--Slider Four end Here-->
+  
+   <!--Grand colab-->
+  
+   <div class="grand"><h1>GRAND GLOBAL BRANDS</h1></div>
+  
+   <!--Grand ends here-->
+    
+  
+   <!--Slider 5-->
+   
+   <div class="slider-wrapper5">
+     <div class="slider-container5">
+       <div class="slide5 active5">
+         <img src="{% static 'images/ga1.jpeg' %}" alt="Image 1">
+         <img src="{% static 'images/ga2.jpeg' %}" alt="Image 2">
+         <img src="{% static 'images/ga3.webp' %}" alt="Image 3">
+         <img src="{% static 'images/ga4.jpeg' %}" alt="Image 4">
+         <img src="{% static 'images/ga5.jpeg' %}" alt="Image 5">
+         <img src="{% static 'images/ga6.jpeg' %}" alt="Image 6">
+       </div>
+       <div class="slide5">
+         <img src="{% static 'images/gb1.jpeg' %}" alt="Image 7">
+         <img src="{% static 'images/gb2.webp' %}" alt="Image 8">
+         <img src="{% static 'images/gb3.jpeg' %}" alt="Image 9">
+         <img src="{% static 'images/gb4.jpeg' %}" alt="Image 10">
+         <img src="{% static 'images/gb5.jpeg' %}" alt="Image 11">
+         <img src="{% static 'images/gb6.png' %}" alt="Image 12">
+       </div>
+     </div>
+   
+     <div class="dots5">
+       <span class="dot5 active" data-index="0"></span>
+       <span class="dot5" data-index="1"></span>
+     </div>
+   </div>
+   
+   <!--Slider 5 Ends here-->
+  
+   <!--Shop by Catgory-->
+   <div class="cat"><h1>SHOP BY CATEGORY</h1></div>
+  
+   <!--shop ends here-->
+     
+   <!--Shop elements-->
+  
+  
+   <div class="promo-section">
+     <div class="promo-card">
+       <img src="{% static 'images/s1.webp' %}" alt="Ethnic Wear">
+   
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s2.webp' %}" alt="WFH Casual Wear">
+      
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s3.webp' %}" alt="Activewear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s4.jpg' %}" alt="Activewear">
+     
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s5.webp' %}" alt="Western Wear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s6.webp' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s7.webp' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s8.webp' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s9.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s10.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s11.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s12.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s13.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s14.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s15.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s16.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s17.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s18.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s19.webp' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s20.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s21.webp' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s22.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s23.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s24.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s25.webp' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s26.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s27.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s28.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s29.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s30.jpg' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s31.webp' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s32.webp' %}" alt="Sportswear">
+       
+     </div>
+     <div class="promo-card">
+       <img src="{% static 'images/s33.webp' %}" alt="Sportswear">
+       
+     </div>
+   </div>
+     <!--Shop By cart -->
+  
+  
+
+
+
+      {% endblock content %}
+
+    
+
+    
+</body>
+</html>

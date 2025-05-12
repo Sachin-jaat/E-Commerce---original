@@ -1,0 +1,36 @@
+{% extends "app1/base.html" %}
+{% block content %}
+<h2>Checkout</h2>
+
+<table border="1" cellpadding="10">
+  <tr>
+    <th>Image</th>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Subtotal</th>
+  </tr>
+  {% for item in cart_items %}
+  <tr>
+    <td>
+      {% if item.product.image %}
+        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" width="60" height="60">
+      {% else %}
+        No Image
+      {% endif %}
+    </td>
+    <td>{{ item.product.name }}</td>
+    <td>{{ item.quantity }}</td>
+    <td>₹{{ item.product.price }}</td>
+    <td>₹{{ item.subtotal }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h3>Total: ₹{{ total_price }}</h3>
+
+<form method="POST" action="{% url 'complete_checkout' %}">
+  {% csrf_token %}
+  <button type="submit">Place Order</button>
+</form>
+{% endblock %}

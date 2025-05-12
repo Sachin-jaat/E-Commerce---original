@@ -1,0 +1,664 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Myntra</title>
+
+
+<link rel="icon" href="{% static 'images/myntra.png' %}" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{%static 'css/style.css'%}">
+
+</head>
+<body>
+
+  <!--Nav Bar-->
+  <header>
+    <nav>
+      <div class="top-nav">
+        <div class="logo">
+          <a href="{% url 'home' %}">
+            <img src="{% static 'images/myntra.png' %}" alt="Myntra Logo" height="50" width="150" />
+          </a>
+          
+        </div>
+
+        <div class="top-nav-center">
+
+          <div class="nav-bar">
+            <!--Men Drop Down-->
+            <div class="dropdown">
+              <a href="{% url 'Men' %}">MEN</a>
+
+              <div class="drop-menu">
+                <div class="column">
+                  <h4 class="Drop-red">Topwear</h4>
+                  <a href="{% url 'tshirt' %}">T-Shirts</a>
+                  <a href="{% url 'cusualshirt' %}">Casual Shirts</a>
+                  <a href="{% url 'Formal_Shirts' %}">Formal Shirts</a>
+                  <a href="{% url 'Sweatshirts' %}">Sweatshirts</a>
+                  <a href="{% url 'Sweaters' %}">Sweaters</a>
+                  <a href="{% url 'Jackets' %}">Jackets</a>
+                  <a href="{% url 'Blazers_Coats' %}">Blazers & Coats</a>
+                  <a href="{% url 'Suits' %}">Suits</a>
+                  <a href="{% url 'Rain_Jackets' %}">Rain Jackets</a>
+                  <div class="divider"></div>
+                  <h4 class="Drop-red">Indian & Festive Wear</h4>
+                  <a href="{% url 'Kurtas_Kurta_Sets' %}">Kurtas & Kurta Sets</a>
+                  <a href="{% url 'Sherwanis' %}">Sherwanis</a>
+                  <a href="{% url 'Nehru_Jackets' %}">Nehru Jackets</a>
+                  <a href="{% url 'Dhotis' %}">Dhotis</a>
+                </div>
+          
+                <div class="column">
+                  <h4 class="Drop-red">Bottomwear</h4>
+                  <a href="{% url 'Jeans' %}">Jeans</a>
+                  <a href="{% url 'Casual_Trousers' %}">Casual Trousers</a>
+                  <a href="{% url 'Formal_Trousers' %}">Formal Trousers</a>
+                  <a href="{% url 'Shorts' %}">Shorts</a>
+                  <a href="{% url 'Track_Pants_Joggers' %}">Track Pants & Joggers</a>
+                  <div class="divider"></div>
+                  <h4 class="Drop-red">Innerwear & Sleepwear</h4>
+                  <a href="{% url 'Briefs_Trunks' %}">Briefs & Trunks</a>
+                  <a href="{% url 'Boxers' %}">Boxers</a>
+                  <a href="{% url 'Vests' %}">Vests</a>
+                  <a href="{% url 'Sleepwear_Loungewear' %}">Sleepwear & Loungewear</a>
+                  <a href="{% url 'Thermals' %}">Thermals</a>
+                  <div class="divider"></div>
+                  <h4 class="Drop-red">Plus Size</h4>
+                </div>
+          
+                <div class="column">
+                  <h4  class="Drop-red">Footwear</h4>
+                  <a href="{% url 'Casual_Shoes' %}">Casual Shoes</a>
+                  <a href="{% url 'Sports_Shoes' %}">Sports Shoes</a>
+                  <a href="{% url 'Formal_Shoes' %}">Formal Shoes</a>
+                  <a href="{% url 'Sneakers' %}">Sneakers</a>
+                  <a href="{% url 'Sandals_Floaters' %}">Sandals & Floaters</a>
+                  <a href="{% url 'Flip_Flops' %}">Flip Flops</a>
+                  <a href="{% url 'Socks' %}">Socks</a>
+                  <div class="divider"></div>
+                  <h4 class="Drop-red">Personal Care & Grooming</h4>
+                  <h4 class="Drop-red">Sunglasses & Frames</h4>
+                  <h4 class="Drop-red">Watches</h4>
+                </div>
+          
+                <div class="column">
+                  <h4 class="Drop-red">Sports & Active Wear</h4>
+                  <a href="{% url 'Sports_Shoes' %}">Sports Shoes</a>
+                  <a href="{% url 'Sandals_Floaters' %}">Sports Sandals</a>
+                  <a href="{% url 'Active_T_Shirts' %}">Active T-Shirts</a>
+                  <a href="{% url 'Track_Pants_Shorts' %}">Track Pants & Shorts</a>
+                  <a href="{% url 'Tracksuits' %}">Tracksuits</a>
+                  <a href="{% url 'Jackets_Sweatshirts' %}">Jackets & Sweatshirts</a>
+                  <a href="{% url 'Sports_Accessories' %}">Sports Accessories</a>
+                  <a href="{% url 'Swimwear' %}">Swimwear</a>
+                  <div class="divider"></div>
+                  <h4 class="Drop-red">Gadgets</h4>
+                  <a href="{% url 'Smart_Wearables' %}">Smart Wearables</a>
+                  <a href="{% url 'Fitness_Gadgets' %}">Fitness Gadgets</a>
+                  <a href="{% url 'Headphones' %}">Headphones</a>
+                  <a href="{% url 'Speakers' %}">Speakers</a>
+                </div>
+          
+                <div class="column">
+                  <h4 class="Drop-red">Fashion Accessories</h4>
+                  <a href="{% url 'Wallets' %}">Wallets</a>
+                  <a href="{% url 'Belts' %}">Belts</a>
+                  <a href="{% url 'Perfumes_Body_Mists' %}">Perfumes & Body Mists</a>
+                  <a href="{% url 'Trimmers' %}">Trimmers</a>
+                  <a href="{% url 'Deodorants' %}">Deodorants</a>
+                  <a href="{% url 'Ties_Cufflinks_Pocket_Squares' %}">Ties, Cufflinks & Pocket Squares</a>
+                  <a href="{% url 'Accessory_Gift_Sets' %}">Accessory Gift Sets</a>
+                  <a href="{% url 'Caps_Hats' %}">Caps & Hats</a>
+                  <a href="{% url 'Mufflers_Scarves_Gloves' %}">Mufflers, Scarves & Gloves</a>
+                  <a href="{% url 'Phone_Cases' %}">Phone Cases</a>
+                  <a href="{% url 'Rings_Wristwear' %}">Rings & Wristwear</a>
+                  <a href="{% url 'Helmets' %}">Helmets</a>
+                  <div class="divider"></div>
+                  <h4 class="Drop-red">Bags & Backpacks</h4>
+                  <h4 class="Drop-red">Luggages & Trolleys</h4>
+                </div>
+              </div>
+            </div>
+    
+            <!--Women Drop Down-->
+            <div class="dropdown1">
+              <a href="{% url 'women' %}">WOMEN</a>
+              <div class="drop-menu1 mega-menu">
+                <div class="mega-column">
+                  <h5 class="tag-heading">Indian & Fusion Wear</h5>
+                  <a href="{% url 'Kurtas_Kurta_Sets' %}">Kurtas & Suits</a>
+                  <a href="{% url 'Kurtis_Tunics_Tops' %}">Kurtis, Tunics & Tops</a>
+                  <a href="{% url 'Ethnic_women_Wear' %}">Ethnic Wear</a>
+                  <a href="{% url 'Leggings_Salwars_Churidars' %}">Leggings, Salwars & Churidars</a>
+                  <a href="{% url 'Sarees' %}">Sarees</a>
+                  <a href="{% url 'Skirts_Palazzos' %}">Skirts & Palazzos</a>
+                  <a href="{% url 'Dress_Materials' %}">Dress Materials</a>
+                  <a href="{% url 'Lehenga_Cholis' %}">Lehenga Cholis</a>
+                  <a href="{% url 'Dupattas_Shawls' %}">Dupattas & Shawls</a>
+                  <a href="{% url 'Jackets_women' %}">Jackets</a>
+                </div>
+                <div class="mega-column">
+                  <h5 class="tag-heading">Western Wear</h5>
+                  <a href="{% url 'Kurtas_Kurta_Sets' %}">Tshirts</a>
+                  <a href="{% url 'Jeans_women' %}">Jeans</a>
+                  <a href="{% url 'Trousers_Capris' %}">Trousers & Capris</a>
+                  <a href="{% url 'Shorts_Skirts_women' %}">Shorts & Skirts</a>
+                  <a href="{% url 'Co_ords_women' %}">Co-ords</a>
+                  <a href="{% url 'Playsuits_women' %}">Playsuits</a>
+                  <a href="{% url 'Jumpsuits_women' %}">Jumpsuits</a>
+                  <a href="{% url 'Shrugs' %}">Shrugs</a>
+                  <a href="{% url 'Sweaters_Sweatshirts' %}">Sweaters & Sweatshirts</a>
+                  <a href="{% url 'Jackets_Coats' %}">Jackets & Coats</a>
+                  <a href="{% url 'Blazers_Waistcoats' %}">Blazers & Waistcoats</a>
+                </div>
+                <div class="mega-column">
+                  <h5 class="tag-heading">Footwear</h5>
+                  <a href="{% url 'Flats' %}">Flats</a>
+                  <a href="{% url 'Casual_Shoes' %}">Casual Shoes</a>
+                  <a href="{% url 'Heels' %}">Heels</a>
+                  <a href="{% url 'Boots' %}">Boots</a>
+                  <a href="{% url 'Sports_Shoes_Floaters' %}">Sports Shoes & Floaters</a>
+                  <h5 class="tag-heading">Sports & Active Wear</h5>
+                  <a href="{% url 'Clothing' %}">Clothing</a>
+                  <a href="{% url 'Footwear' %}">Footwear</a>
+                  <a href="{% url 'Sports_Accessories' %}">Sports Accessories</a>
+                  <a href="{% url 'Sports_Equipment' %}">Sports Equipment</a>
+                </div>
+                <div class="mega-column">
+                  <h5 class="tag-heading">Lingerie & Sleepwear</h5>
+                  <a href="{% url 'Bra' %}">Bra</a>
+                  <a href="{% url 'Briefs' %}">Briefs</a>
+                  <a href="{% url 'Shapewear' %}">Shapewear</a>
+                  <a href="{% url 'Sleepwear_Loungewear' %}">Sleepwear & Loungewear</a>
+                  <a href="{% url 'Swimwear' %}">Swimwear</a>
+                  <a href="{% url 'Camisoles_Thermals' %}">Camisoles & Thermals</a>
+                  <h5 class="tag-heading"></h5>
+                  <a href="{% url 'Makeup' %}">Makeup</a>
+                  <a href="{% url 'Skincare' %}">Skincare</a>
+
+                </div>
+              </div>
+            </div>
+            
+             <!--KIDS Drop Down-->
+
+             <div class="dropdown2">
+              <a href="{% url 'kids' %}">KIDS</a>
+              <div class="drop-menu2">
+                
+                <div class="column2">
+                  <h5>Boys Clothing</h5>
+                  <a href="{% url 'T_Shirts_kids' %}">T-Shirts</a>
+                  <a href="{% url 'Shirts_kids' %}">Shirts</a>
+                  <a href="{% url 'Shorts_kids' %}">Shorts</a>
+                  <a href="{% url 'Jeans_kids' %}">Jeans</a>   
+                  <a href="{% url 'Trousers_kids' %}">Trousers</a>
+                  <a href="{% url 'Clothing_Sets_kids' %}">Clothing Sets</a>
+                  <a href="{% url 'Ethnic_Wear_kids' %}">Ethnic Wear</a>
+                  <a href="{% url 'Track_Pants_Pyjamas_kids' %}">Track Pants & Pyjamas</a>
+                  <a href="{% url 'Jacket_Sweater_Sweatshirts_kids' %}">Jacket, Sweater & Sweatshirts</a>
+                  <a href="{% url 'Party_Wear_kids' %}">Party Wear</a>
+                  <a href="{% url 'Innerwear_Thermals_kids' %}">Innerwear & Thermals</a>
+                  <a href="{% url 'Nightwear_Loungewear_kids' %}">Nightwear & Loungewear</a>
+                  <a href="{% url 'Value_Pack_kids' %}">Value Pack</a>
+            
+                  <div class="divider2"></div>
+            
+                  <h5>Girls Clothing</h5>
+                  <a href="{% url 'Dresses_kids' %}">Dresses</a>
+                  <a href="{% url 'Tops_kids' %}">Tops</a>
+                  <a href="{% url 'Tshirts' %}">Tshirts</a>
+                  <a href="{% url 'Jeans_kids' %}">Jeans</a>
+                  <a href="{% url 'Trousers_Capris_kids' %}">Trousers & Capris</a>
+                  <a href="{% url 'Shorts_Skirts_kids' %}">Shorts & Skirts</a>
+                  <a href="{% url 'Co_ords_kids' %}">Co-ords</a>
+                  <a href="{% url 'Playsuits_kids' %}">Playsuits</a>
+                  <a href="{% url 'Jumpsuits_kids' %}">Jumpsuits</a>
+                  <a href="{% url 'Sweaters_Sweatshirts' %}">Shrugs</a>
+                  <a href="{% url 'Jackets_Coats_kids' %}">Sweaters & Sweatshirts</a>
+                  <a href="{% url 'Blazers_Waistcoats_kids' %}">Jackets & Coats</a>
+                  <a href="{% url 'Casual_Shoes_kids' %}">Blazers & Waistcoats</a>
+                </div>
+            
+                <div class="column2">
+                  <h5>Footwear</h5>
+                  <a href="{% url 'Casual_Shoes_kids' %}">Casual Shoes</a>
+                  <a href="{% url 'Flipflops_kids' %}">Flipflops</a>
+                  <a href="{% url 'Sports_Shoes_kids' %}">Sports Shoes</a>
+                 
+                 
+            
+                  <div class="divider2"></div>
+            
+                  <h5>Innerwear & Sleepwear</h5>
+                  <a href="{% url 'kids' %}">Briefs & Trunks</a>
+                  <a href="{% url 'kids' %}">Boxers</a>
+                  <a href="{% url 'kids' %}">Vests</a>
+                  <a href="{% url 'kids' %}">Sleepwear & Loungewear</a>
+                  <a href="{% url 'kids' %}">Socks</a>
+                </div>
+          
+            
+                <div class="column2">
+                  <h5>Infants</h5>
+                  <a href="#">Bodysuits</a>
+                  <a href="#">Rompers & Sleepsuits</a>
+                  <a href="#">Tshirts & Tops</a>
+                  <a href="#">Dresses</a>
+                  <a href="#">Bottom wear</a>
+                  <a href="#">Innerwear & Sleepwear</a>
+                  <a href="#">Infant Care</a>
+                </div>
+            
+              </div>
+            </div>
+            
+
+            <!--Home Drop Down-->
+
+            <div class="dropdown3">
+
+              <a href="{% url 'homenavbar' %}">HOME</a>
+              <div class="drop-menu3 mega-menu3">
+                <div class="mega-column3">
+                  <h5>Bed Linen & Furnishing</h5>
+                  <a href="{% url 'Bed_Runners_home' %}">Bed Runners</a>
+                  <a href="{% url 'Mattress_Protectors_home' %}">Mattress Protectors</a>
+                  <a href="{% url 'Bedsheets_home' %}">Bedsheets</a>
+                  <a href="#">Bedding Sets</a>
+                  <a href="#">Blankets, Quilts & Dohars</a>
+                  <a href="#">Pillows & Pillow Covers</a>
+                  <a href="#">Bed Covers</a>
+                  <a href="#">Diwan Sets</a>
+                  <a href="#">Chair Pads & Covers</a>
+                  <a href="#">Sofa Covers</a>
+                </div>
+
+                <div class="mega-column3">
+                  <h5>Bath</h5>
+                  <a href="{% url 'Bath_Towels_home' %}">Bath Towels</a>
+                  <a href="{% url 'Hand_Face_Towels_home' %}">Hand & Face Towels</a>
+                  <a href="#">Beach Towels</a>
+                  <a href="#">Bath Rugs</a>
+                  <a href="#">Bath Robes</a>
+                  <a href="#">Bathroom Accessories</a>
+                  <a href="#">Shower Curtains</a>
+                </div>
+
+                <div class="mega-column3">
+                  <h5>Home Décor</h5>
+                  <a href="{% url 'Plants_Planters_home' %}">Plants & Planters</a>
+                  <a href="{% url 'Aromas_Candles_home' %}">Aromas & Candles</a>
+                  <a href="{% url 'Mirrors_home' %}">Mirrors</a>
+                  <a href="#">Wall Décor</a>
+                  <a href="#">Festive Decor</a>
+                    <a href="">Pooja Essentials</a>
+                  <a href="#">Wall Shelves</a>
+                  <a href="#">Fountains</a>
+                  <a href="#">Showpieces & Vases</a>
+                  <a href="#">Ottoman</a>
+                </div>
+
+                <div class="mega-column3">
+                  <h5>Kitchen & Table</h5>
+                  <a href="#">Table Runners</a>
+                  <a href="#">Dinnerware & Serveware</a>
+                  <a href="#">Cups and Mugs</a>
+                  <a href="#"> Bakeware & Cookware</a>
+                  <a href="#"> Kitchen Storage & Tools</a>
+                  <a href="#">Bar & Drinkware</a>
+                </div>
+              </div>
+            </div>
+            
+
+            <!--BEAUTY Drop Down-->
+           
+            <div class="dropdown4">
+
+              <a href="{% url 'beauty' %}">BEAUTY</a>
+              <div class="drop-menu4 mega-menu4">
+                <div class="mega-column4">
+                  <h5>Makeup</h5>
+                  <a href="#">Lipstick</a>
+                  <a href="#">Lip Gloss</a>
+                  <a href="#">Lip Liner</a>
+                  <a href="#">Mascara</a>
+                  <a href="#">Eyeliner</a>
+                  <a href="#">Kajal</a>
+                  <a href="#">Eyeshadow</a>
+                  <a href="#">Foundation</a>
+                  <a href="#">Concealer</a>
+                  <a href="#">Compact</a>
+                  <a href="#">Nail Polish</a>
+                </div>
+
+                <div class="mega-column4">
+                  <h5>Skincare, Bath & Body</h5>
+                  <a href="#">Face Moisturiser</a>
+                  <a href="#">Cleanser</a>
+                  <a href="#">Masks & Peel</a>
+                  <a href="#">Face Wash</a>
+                  <a href="#">  Body Wash</a>
+                  <a href="#">Body Scrub</a>
+                  <a href="#">Hand Cream</a>
+                </div>
+               
+                <div class="mega-column4">
+                  <h5>Haircare</h5>
+                  <a href="#">Shampoo</a>
+                  <a href="#">Conditioner</a>
+                  <a href="#">Hair Cream</a>
+                  <a href="#">Hair Oil</a>
+                  <a href="#">Hair Color</a>
+                    <a href="">Hair Gel</a>
+                  <a href="#">Hair Accessory</a>
+                </div>
+
+              
+                <div class="mega-column4">
+                  <h5>Fragrances</h5>
+                  <a href="#">Perfume</a>
+                  <a href="#">Deodorant</a>
+                  <a href="#">Body Mist</a>
+                </div>
+              </div>
+            </div>
+
+
+
+             <!--GENZ-->
+
+             <div class="dropdown5">
+              <a href="{% url 'genz' %}">GENZ</a>
+              <div class="drop-menu5 mega-menu5">
+                <div class="mega-column5">
+                  <h5>Women's Western Wear</h5>
+                  <a href="#">Dresses</a>
+                  <a href="#">Jeans</a>
+                  <a href="#">Trousers</a>
+                  <a href="#">Shirts</a>
+                  <a href="#">Shorts</a>
+                  <a href="#">Jackets</a>
+                  <a href="#">Sweaters</a>
+                  <a href="#">Foundation</a>
+                  <a href="#">Skirts</a>
+        
+                </div>
+
+                <div class="mega-column5">
+                  <h5>Women's Ethnic Wear</h5>
+                  <a href="#">Kurtas</a>
+                  <a href="#">Kurtis</a>
+                  <a href="#">Kurta sets</a>
+                  <a href="#">Face Wash</a>
+                  <a href="#">Ethnic Dresses</a>
+                  <a href="#">Palazzos</a>
+                </div>
+              
+                <div class="mega-column5">
+                  <h5>Lingerie & Loungewear</h5>
+                  <a href="#">Bras</a>
+                  <a href="#">Night suits</a>
+                  <a href="#">Nightdresses</a>
+                  <a href="#">Lounge pants</a>
+                  <a href="#">Shapewear</a>
+                  <a href="">Briefs</a>
+                </div>
+              
+              
+                <div class="mega-column4">
+                  <h5>Accessories</h5>
+                  <a href="#">Handbags</a>
+                  <a href="#">Backpackst</a>
+                  <a href="#">Sunglasses</a>
+                  <a href="#">Belts</a>
+                  <a href="#">Caps</a>
+                </div>
+              </div>
+            </div>
+          
+             <!--STUDIO-->
+             <div class="dropdown-studio">
+              <a href="{% url 'studio' %}">STUDIO<span class="new-label">NEW</span></a>
+              <div class="drop-menu-studio">
+                <img src="{% static 'images/studio.png' %}" alt="Studio" height="400" width="700" />
+              </div>
+            </div>
+            
+          
+             <!--drop downs ends -->
+          </div>
+
+          <form class="search-bar" action="#" method="GET">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search for products, brands and more" name="q" />
+          </form>
+
+          <div class="top-nav-right">
+            <ul>
+              <li>
+                <div class="profile dropdown">
+                  <a href="{% url 'profile' %}" aria-label="Profile" class="nav-icon dropbtn">
+                    <i class="fa-solid fa-user"></i>
+                  </a>
+                  <span>Profile</span>
+                  <div class="dropdown-content">
+                    {% if user.is_authenticated %}
+                      <a href="{% url 'profile' %}">My Profile</a>
+                      <a href="{% url 'myorders' %}">My Orders</a>
+                      <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+                    {% else %}
+                      <a href="{% url 'login' %}">Login</a>
+                      <a href="{% url 'signup' %}">Sign Up</a>
+                    {% endif %}
+                  </div>
+                
+              </li>
+              <li>
+                <div class="Wishlist">
+                  <a href="{% url 'wishlist' %}" aria-label="Wishlist" class="nav-icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                  <span>Wishlist</span>
+                </div>
+              </li>
+              
+              <li>
+                <div class="Bag">
+                  <a href="{% url 'view_cart' %}" aria-label="Bag" class="nav-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                  </a>
+                  <span>Bag</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      
+    </nav>
+    <!-- NAVBAR Ends Here -->
+
+  </header>
+    <!--NavBar Ends Here-->
+  
+   
+   {% block content %}{% endblock content %}
+   
+ 
+   <!--Footer Section  1--> 
+   <footer class="footer">
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>ONLINE SHOPPING</h4>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Home</a>
+        <a href="#">Beauty</a>
+        <a href="#">Genz</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Myntra Insider</a>
+        <h4>USEFUL LINKS</h4>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">Site Map</a>
+        <a href="#">Corporate Information</a>
+        <a href="#">Whitehat</a>
+        <a href="#">Cleartrip</a>
+      </div>
+  
+      <div class="footer-column">
+        <h4>CUSTOMER POLICIES</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQ</a>
+        <a href="#">T&C</a>
+        <a href="#">Terms Of Use</a>
+        <a href="#">Track Orders</a>
+        <a href="#">Shipping</a>
+        <a href="#">Cancellation</a>
+        <a href="#">Returns</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Grievance Redressal</a>
+      </div>
+  
+      <div class="footer-column right">
+        <h4>EXPERIENCE MYNTRA APP ON MOBILE</h4>
+        <div class="app-links">
+          <img src="{% static 'images/gogleplay.png' %}" alt="org">
+          <img src="{% static 'images/appstore.png' %}" alt="org">
+        </div>
+        <h4>KEEP IN TOUCH</h4>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+        <div class="guarantee">
+          <img src="{% static 'images/org.png' %}" alt="org">
+          <p><strong>100% ORIGINAL</strong> guarantee for all products at myntra.com</p>
+         
+        </div>
+        <div class="return">
+          <img src="{% static 'images/return.png' %}" alt="return">
+          <p><strong>RETURN Within 14days</strong> of receiving your order</p>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  
+   <!--fotter Ends-->
+ 
+  <!--footer Section 2-->
+ 
+  <div class="popular-searches">
+    <h4>POPULAR SEARCHES</h4>
+    <p>
+      <a href="#">Makeup</a> |
+      <a href="#">Dresses For Girls</a> |
+      <a href="#">T-Shirts</a> |
+      <a href="#">Sandals</a> |
+      <a href="#">Babydolls</a> |
+      <a href="#">Blazers For Men</a> |
+      <a href="#">Handbags</a> |
+      <a href="#">Ladies Watches</a> |
+      <a href="#">Bags</a> |
+      <a href="#">Sport Shoes</a> |
+      <a href="#">Reebok Shoes</a> |
+      <a href="#">Puma Shoes</a> |
+      <a href="#">Boxers</a> |
+      <a href="#">Wallets</a> |
+      <a href="#">Tops</a> |
+      <a href="#">Earrings</a> |
+      <a href="#">Fastrack Watches</a> |
+      <a href="#">Kurtis</a> |
+      <a href="#">Nike</a> |
+      <a href="#">Smart Watches</a> |
+      <a href="#">Titan Watches</a> |
+      <a href="#">Designer Blouse</a> |
+      <a href="#">Gowns</a> |
+      <a href="#">Rings</a> |
+      <a href="#">Cricket Shoes</a> |
+      <a href="#">Forever 21</a> |
+      <a href="#">Eye Makeup</a> |
+      <a href="#">Photo Frames</a> |
+      <a href="#">Punjabi Suits</a> |
+      <a href="#">Bikini</a> |
+      <a href="#">Myntra Fashion Show</a> |
+      <a href="#">Lipstick</a> |
+      <a href="#">Saree</a> |
+      <a href="#">Watches</a> |
+      <a href="#">Dresses</a> |
+      <a href="#">Lehenga</a> |
+      <a href="#">Nike Shoes</a> |
+      <a href="#">Goggles</a> |
+      <a href="#">Bras</a> |
+      <a href="#">Suit</a> |
+      <a href="#">Chinos</a> |
+      <a href="#">Shoes</a> |
+      <a href="#">Adidas Shoes</a> |
+      <a href="#">Woodland Shoes</a> |
+      <a href="#">Jewellery</a> |
+      <a href="#">Designers Sarees</a>
+    </p>
+  
+    <p class="concern">In case of any concern, <a href="#">Contact Us</a></p>
+  
+    <div class="footer-note">
+      <div class="left">© 2025 www.myntra.com. All rights reserved.</div>
+      <div class="right">A Flipkart company</div>
+    </div>
+    
+  </div>
+  
+       
+   <!--address-->
+   <div class="last-contact">
+    <div class="address-container">
+      <div class="address">
+        <h3>Registered Office Address</h3>
+        <p>
+          Buildings Alyssa,<br>
+          Begonia and Clover situated in Embassy Tech Village,<br>
+          Outer Ring Road,<br>
+          Devarabeesanahalli Village,<br>
+          Varthur Hobli,<br>
+          Bengaluru - 560103, India
+        </p>
+      </div>
+  
+      <div class="number">
+        <p>
+          CIN: U72300KA2007PTC041799<br>
+          Telephone: +91-80-61561999
+        </p>
+      </div>
+    </div>
+  </div>
+  
+ 
+ <!--codes ends-->
+   
+  
+
+  <!--  link js-->
+  <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

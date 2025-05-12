@@ -1,0 +1,246 @@
+{% extends "app1/base.html" %}
+{% load static %}
+
+{% block content %}  
+
+
+   
+  <!--Slider 1 for Men -->
+  {% comment %} <div class="slider-wrapper">
+    <div class="slider-container">
+      <div class="slide active">
+        <img src="{% static 'images/ms1.webp' %}" alt="Image 1">
+      </div>
+      <div class="slide">
+        <img src="{% static 'images/ms2.webp' %}" alt="Image 2">
+      </div>
+      <div class="slide">
+        <img src="{% static 'images/ms3.jpg' %}" alt="Image 3">
+      </div>
+      <div class="slide">
+        <img src="{% static 'images/ms4.jpg' %}" alt="Image 4">
+      </div>
+      <div class="slide">
+        <img src="{% static 'images/ms5.jpg' %}" alt="Image 4">
+      </div>
+    </div>
+
+   
+    <div class="dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+    </div>
+  </div> {% endcomment %}
+  <div class="slider-wrapper">
+    <div class="slider-container">
+      <div class="slide active">
+        <a href="{% url "product_list" %}">
+          <img src="{% static 'images/ms2.webp' %}" alt="Image 1">
+        </a>
+      </div>
+      <div class="slide">
+        <a href="{% url "product_list" %}">
+          <img src="{% static 'images/ms3.jpg' %}" alt="Image 2">
+        </a>
+      </div>
+      <div class="slide">
+        <a href="{% url "product_list" %}">
+          <img src="{% static 'images/ms1.webp' %}" alt="Image 3">
+        </a>
+      </div>
+      <div class="slide">
+        <a href="{% url "product_list" %}">
+          <img src="{% static 'images/ms4.jpg' %}" alt="Image 4">
+        </a>
+      </div>
+      <div class="slide">
+        <a href="{% url "product_list" %}">
+          <img src="{% static 'images/ms5.jpg' %}" alt="Image 5">
+        </a>
+      </div>
+    </div>
+  
+    <div class="dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+    </div>
+  </div>
+  
+  <!--Slider 1 ends-->
+
+ <!--delas-->
+       <div class="star"><h1>BIGGEST DEALS ON TOP BRANDS</h1></div>
+
+  <!--deals ends-->
+
+
+  <!--deals cat-->
+
+  <div class="promo-section">
+    <div class="promo-card">
+      <img src="{% static 'images/bs1.webp' %}" alt="Ethnic Wear">
+  
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/bs2.webp' %}" alt="WFH Casual Wear">
+     
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/bs3.webp' %}" alt="Activewear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/bs4.webp' %}" alt="Activewear">
+    
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/bs5.webp' %}" alt="Western Wear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/bs6.webp' %}" alt="Sportswear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/bs7.webp' %}" alt="Sportswear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/bs8.webp' %}" alt="Sportswear">
+    </div>
+  </div>
+  <!--deals cat ends-->
+
+  <!--Cat to Bag-->
+  <div class="star"><h1>CATEGORIES TO BAG</h1></div>
+  <!--bag ends-->
+
+  <!--circluar bag start-->
+  <div class="promo-section">
+    <div class="promo-card">
+      <img src="{% static 'images/sa1.webp' %}" alt="Ethnic Wear">
+  
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/sa2.webp' %}" alt="WFH Casual Wear">
+     
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/sa3.webp' %}" alt="Activewear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/sa4.webp' %}" alt="Activewear">
+    
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/sa5.webp' %}" alt="Western Wear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/sa6.webp' %}" alt="Sportswear">
+      
+    </div>
+    
+  </div>
+
+  <!--circular bag end-->
+
+  <!--Top brand-->
+  <div class="star"><h1>EXPLORE TOP BRANDS</h1></div>
+  <!--top brand code -->
+
+  <div class="promo-section">
+  
+    <div class="promo-card">
+      <img src="{% static 'images/ta1.webp' %}" alt="WFH Casual Wear">
+     
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/ta2.webp' %}" alt="Activewear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/ta3.webp' %}" alt="Activewear">
+    
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/ta5.webp' %}" alt="Western Wear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/ta6.webp' %}" alt="Sportswear">
+      
+    </div>
+    
+  </div>
+
+  <!--Top brand ends-->
+
+  <!--Trending In Footwear-->
+  <div class="star"><h1>Trending In Footwear</h1></div>
+  <!--Trending In Footwear ends-->
+
+  <!--Top Footwear-->
+  <div class="promo-section">
+  
+    <div class="promo-card">
+      <img src="{% static 'images/fa1.webp' %}" alt="WFH Casual Wear">
+     
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/fa2.webp' %}" alt="Activewear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/fa3.webp' %}" alt="Activewear">
+    
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/fa5.webp' %}" alt="Western Wear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/fa6.webp' %}" alt="Western Wear">
+      
+    </div>
+  </div>
+  <!--Footwear ends-->
+
+
+  <!--ACS-->
+  <div class="star"><h1>Trending In Accessories</h1></div>
+
+  <div class="promo-section">
+  
+    <div class="promo-card">
+      <img src="{% static 'images/xx1.webp' %}" alt="WFH Casual Wear">
+     
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/xx2.webp' %}" alt="Activewear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/xx3.webp' %}" alt="Activewear">
+    
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/xx4.webp' %}" alt="Western Wear">
+      
+    </div>
+    <div class="promo-card">
+      <img src="{% static 'images/xx5.webp' %}" alt="Western Wear">
+      
+    </div>
+  </div>
+
+  <!--Code Ends-->
+{% endblock content %}
+  
